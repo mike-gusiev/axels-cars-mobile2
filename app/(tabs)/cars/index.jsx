@@ -35,7 +35,7 @@ const CarsPage = () => {
 
   // const { userLoggedIn, currentUser } = useAuth();
 
-  return <Text>fewfwefewffwefwefs</Text>;
+  // return <Text>fewfwefewffwefwefs</Text>;
 
   // const { activeBookings, completedBookings, fetchUserBookings } =
   //   useFetchUserBookings(currentUser);
@@ -88,160 +88,160 @@ const CarsPage = () => {
   //   setFormHidden((prev) => !prev);
   // };
 
-  // return (
-  //   <KeyboardAvoidingView
-  //     behavior={Platform.OS === "ios" ? "padding" : "height"}
-  //     style={{ flex: 1 }}
-  //     keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 76}
-  //   >
-  //     {!userLoggedIn ? (
-  //       <Redirect href="/cars/login" />
-  //     ) : (
-  //       <SafeAreaProvider>
-  //         <Stack.Screen
-  //           options={{
-  //             headerShown: false,
-  //           }}
-  //         />
-  //         <ThemedView
-  //           style={styles.container}
-  //           lightColor={undefined}
-  //           darkColor={undefined}
-  //         >
-  //           {/* <LinearGradient
-  //             colors={['#A3BDED', '#6991C7']}
-  //             start={{ x: 0, y: 0 }}
-  //             end={{ x: 1, y: 0 }}
-  //             style={styles.background}
-  //           /> */}
-  //           <SafeAreaView style={styles.myCarsWrapper}>
-  //             <View style={styles.myCarsHeader}>
-  //               <TouchableOpacity
-  //                 style={styles.signOutButton}
-  //                 onPress={doSignOut}
-  //               >
-  //                 <ThemedText
-  //                   style={styles.signOutButtonText}
-  //                   lightColor={undefined}
-  //                   darkColor={undefined}
-  //                 >
-  //                   Вийти
-  //                 </ThemedText>
-  //               </TouchableOpacity>
-  //               <ThemedText
-  //                 style={undefined}
-  //                 lightColor={"#fff"}
-  //                 darkColor={"#fff"}
-  //               >
-  //                 {currentUser?.email}
-  //               </ThemedText>
-  //             </View>
-  //             <ScrollView
-  //               refreshControl={
-  //                 <RefreshControl
-  //                   refreshing={refreshing}
-  //                   onRefresh={onRefresh}
-  //                 />
-  //               }
-  //               style={styles.mainContainer}
-  //             >
-  //               <View>
-  //                 <View style={styles.containerTitle}>
-  //                   <ThemedText
-  //                     lightColor="white"
-  //                     type="title"
-  //                     style={undefined}
-  //                     darkColor={undefined}
-  //                   >
-  //                     {cars.length > 0 ? "Додані авто" : "Додай авто"}
-  //                   </ThemedText>
-  //                   <TouchableOpacity
-  //                     style={styles.addButton}
-  //                     onPress={toggleForm}
-  //                   >
-  //                     <Text style={styles.addButtonText}>
-  //                       {formHidden ? "Додати" : "Приховати"}{" "}
-  //                     </Text>
-  //                   </TouchableOpacity>
-  //                 </View>
+  const userLoggedIn = false;
 
-  //                 {!formHidden && (
-  //                   <AddCarForm
-  //                     setFormHidden={setFormHidden}
-  //                     setCars={setCars}
-  //                   />
-  //                 )}
-  //                 {carsIsLoading ? (
-  //                   <View style={styles.loaderWrapper}>
-  //                     <ThemedText
-  //                       lightColor="black"
-  //                       type="default"
-  //                       style={undefined}
-  //                       darkColor={"black"}
-  //                     >
-  //                       Завантаження...
-  //                     </ThemedText>
-  //                   </View>
-  //                 ) : (
-  //                   <View style={styles.myCarsList}>
-  //                     {cars.map((car) => (
-  //                       <CarCard car={car} key={car.id} deleteCar={deleteCar} />
-  //                     ))}
-  //                   </View>
-  //                 )}
-  //               </View>
-  //               {activeBookings.length > 0 && (
-  //                 <View>
-  //                   <ThemedText
-  //                     lightColor="white"
-  //                     type="title"
-  //                     style={styles.title}
-  //                     darkColor={undefined}
-  //                   >
-  //                     Активні бронювання
-  //                   </ThemedText>
-  //                   <View>
-  //                     {activeBookings.map((booking) => (
-  //                       <BookingCard
-  //                         key={booking.id}
-  //                         fetchUserBookings={fetchUserBookings}
-  //                         item={booking}
-  //                         done={false}
-  //                       ></BookingCard>
-  //                     ))}
-  //                   </View>
-  //                 </View>
-  //               )}
-  //               {completedBookings.length > 0 && (
-  //                 <View>
-  //                   <ThemedText
-  //                     lightColor="white"
-  //                     type="title"
-  //                     style={styles.title}
-  //                     darkColor={undefined}
-  //                   >
-  //                     Виконані бронювання
-  //                   </ThemedText>
-
-  //                   <View>
-  //                     {completedBookings.map((booking) => (
-  //                       <BookingCard
-  //                         key={booking.id}
-  //                         fetchUserBookings={fetchUserBookings}
-  //                         item={booking}
-  //                         done={true}
-  //                       ></BookingCard>
-  //                     ))}
-  //                   </View>
-  //                 </View>
-  //               )}
-  //             </ScrollView>
-  //           </SafeAreaView>
-  //         </ThemedView>
-  //       </SafeAreaProvider>
-  //     )}
-  //   </KeyboardAvoidingView>
-  // );
+  return (
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={{ flex: 1 }}
+      keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 76}
+    >
+      {!userLoggedIn ? (
+        <Redirect href="/cars/login" />
+      ) : (
+        <SafeAreaProvider>
+          <Stack.Screen
+            options={{
+              headerShown: false,
+            }}
+          />
+          <ThemedView
+            style={styles.container}
+            lightColor={undefined}
+            darkColor={undefined}
+          >
+            {/* <LinearGradient
+               colors={['#A3BDED', '#6991C7']}
+               start={{ x: 0, y: 0 }}
+               end={{ x: 1, y: 0 }}
+               style={styles.background}
+             /> */}
+            <SafeAreaView style={styles.myCarsWrapper}>
+               <View style={styles.myCarsHeader}>
+                 <TouchableOpacity
+                   style={styles.signOutButton}
+                   onPress={doSignOut}
+                 >
+                   <ThemedText
+                     style={styles.signOutButtonText}
+                     lightColor={undefined}
+                     darkColor={undefined}
+                   >
+                     Вийти
+                   </ThemedText>
+                 </TouchableOpacity>
+                 <ThemedText
+                   style={undefined}
+                   lightColor={"#fff"}
+                   darkColor={"#fff"}
+                >
+                   {currentUser?.email}
+                 </ThemedText>
+               </View>
+               <ScrollView
+                 refreshControl={
+                   <RefreshControl
+                     refreshing={refreshing}
+                     onRefresh={onRefresh}
+                   />
+                 }
+                 style={styles.mainContainer}
+               >
+                 <View>
+                   <View style={styles.containerTitle}>
+                     <ThemedText
+                       lightColor="white"
+                       type="title"
+                       style={undefined}
+                       darkColor={undefined}
+                     >
+                       {cars.length > 0 ? "Додані авто" : "Додай авто"}
+                     </ThemedText>
+                     <TouchableOpacity
+                       style={styles.addButton}
+                       onPress={toggleForm}
+                     >
+                       <Text style={styles.addButtonText}>
+                         {formHidden ? "Додати" : "Приховати"}{" "}
+                       </Text>
+                     </TouchableOpacity>
+                   </View>
+                   {!formHidden && (
+                     <AddCarForm
+                       setFormHidden={setFormHidden}
+                       setCars={setCars}
+                     />
+                   )}
+                   {carsIsLoading ? (
+                     <View style={styles.loaderWrapper}>
+                       <ThemedText
+                         lightColor="black"
+                         type="default"
+                         style={undefined}
+                         darkColor={"black"}
+                       >
+                         Завантаження...
+                       </ThemedText>
+                     </View>
+                   ) : (
+                     <View style={styles.myCarsList}>
+                       {cars.map((car) => (
+                         <CarCard car={car} key={car.id} deleteCar={deleteCar} />
+                       ))}
+                     </View>
+                   )}
+                 </View>
+                 {activeBookings.length > 0 && (
+                   <View>
+                     <ThemedText
+                       lightColor="white"
+                       type="title"
+                       style={styles.title}
+                       darkColor={undefined}
+                     >
+                       Активні бронювання
+                     </ThemedText>
+                     <View>
+                       {activeBookings.map((booking) => (
+                         <BookingCard
+                           key={booking.id}
+                           fetchUserBookings={fetchUserBookings}
+                           item={booking}
+                           done={false}
+                         ></BookingCard>
+                       ))}
+                     </View>
+                   </View>
+                 )}
+                 {completedBookings.length > 0 && (
+                   <View>
+                     <ThemedText
+                       lightColor="white"
+                       type="title"
+                       style={styles.title}
+                       darkColor={undefined}
+                     >
+                       Виконані бронювання
+                     </ThemedText>
+                     <View>
+                       {completedBookings.map((booking) => (
+                         <BookingCard
+                           key={booking.id}
+                           fetchUserBookings={fetchUserBookings}
+                           item={booking}
+                           done={true}
+                         ></BookingCard>
+                       ))}
+                     </View>
+                   </View>
+                 )}
+               </ScrollView>
+             </SafeAreaView>
+          </ThemedView>
+        </SafeAreaProvider>
+      )}
+    </KeyboardAvoidingView>
+  );
 };
 
 export default CarsPage;

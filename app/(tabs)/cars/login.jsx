@@ -8,29 +8,29 @@ import {
 import { Link, Redirect, Stack, useRouter } from "expo-router";
 import { useState } from "react";
 
-// import {
-//   ThemedView,
-//   ThemedText,
-//   HelloWave,
-//   CustomInput,
-// } from '../../../components';
+import {
+  ThemedView,
+  ThemedText,
+  HelloWave,
+    CustomInput,
+} from "../../../components";
 
 // import { doSignInWithEmailAndPassword } from '../../../firebase/auth';
 // import { useAuth } from '../../../context/authContext';
 // import { LinearGradient } from 'expo-linear-gradient';
 
 const LoginPage = () => {
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-    setError,
-    getValues,
-  } = useForm();
+  // const {
+  //   control,
+  //   handleSubmit,
+  //   formState: { errors },
+  //   setError,
+  //   getValues,
+  // } = useForm();
 
   const [isSigningIn, setIsSigningIn] = useState(false);
 
-  const { userLoggedIn } = useAuth();
+  // const { userLoggedIn } = useAuth();
 
   const router = useRouter();
 
@@ -56,18 +56,20 @@ const LoginPage = () => {
     }
   };
 
+  const userLoggedIn = false;
+
   return (
     <>
       {userLoggedIn ? (
         <Redirect href="/" />
       ) : (
         <>
-          <LinearGradient
+          {/* <LinearGradient
             colors={["#A3BDED", "#6991C7"]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
             style={styles.background}
-          />
+          /> */}
           <Stack.Screen
             options={{
               headerTitle: "",
@@ -97,7 +99,7 @@ const LoginPage = () => {
               Будь-ласка, авторизуйтесь <HelloWave />
             </ThemedText>
             <View style={styles.inputContainer}>
-              <CustomInput
+              {/* <CustomInput
                 rules={{
                   required: "Ел. пошта обов'язкова",
                   pattern: {
@@ -111,8 +113,8 @@ const LoginPage = () => {
                 placeholder={"Ел. пошта"}
                 keyboardType={"email-address"}
                 style={undefined}
-              />
-              <CustomInput
+              /> */}
+              {/* <CustomInput
                 rules={{
                   required: "Пароль обов'язковий",
                   minLength: {
@@ -126,16 +128,16 @@ const LoginPage = () => {
                 placeholder={"Пароль"}
                 secureTextEntry
                 style={undefined}
-              />
+              /> */}
             </View>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               disabled={isSigningIn}
               style={[
                 styles.button,
                 isSigningIn ? styles.disabledButton : null,
               ]}
               onPress={handleSubmit(onSubmit)}
-            >
+            > */}
               <ThemedText
                 lightColor="white"
                 style={styles.textCenter}
@@ -143,7 +145,7 @@ const LoginPage = () => {
               >
                 {isSigningIn ? "Вхід..." : "Увійти"}
               </ThemedText>
-            </TouchableOpacity>
+            {/* </TouchableOpacity> */}
             <TouchableOpacity
               style={[styles.button, styles.signUp]}
               onPress={() => router.navigate("/register")}
