@@ -1,11 +1,11 @@
-import { StyleSheet, View, TouchableOpacity } from "react-native";
-// import { useForm } from 'react-hook-form';
+import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
+import { useForm } from "react-hook-form";
 import { Link, Redirect, Stack, useRouter } from "expo-router";
 import { useState } from "react";
 
-// import { ThemedText, ThemedView, HelloWave, CustomInput } from '../components';
+import { ThemedText, ThemedView, HelloWave, CustomInput } from "../components";
 
-// import { useAuth } from "../context/authContext";
+import { useAuth } from "../context/authContext";
 // import { doCreateUserWithEmailAndPassword } from "../firebase/auth";
 // import { LinearGradient } from "expo-linear-gradient";
 
@@ -54,12 +54,13 @@ const RegisterPage = () => {
         <Redirect href="/" />
       ) : (
         <>
-          <LinearGradient
+          <Text>register page</Text>
+          {/* <LinearGradient
             colors={["#A3BDED", "#6991C7"]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
             style={styles.background}
-          />
+          /> */}
           <Stack.Screen
             options={{ headerTitle: "", headerTransparent: true }}
           />
